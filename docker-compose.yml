@@ -1,0 +1,38 @@
+services:
+  base:
+    build:
+      context: .
+      target: base
+    image: myapp-base:latest
+
+  service1:
+    build:
+      context: .
+      target: service1
+    image: myapp-service1:latest
+    ports:
+      - "46081:80"
+
+  service2:
+    build:
+      context: .
+      target: service2
+    image: myapp-service2:latest
+    ports:
+      - "46082:80"
+
+  service3:
+    build:
+      context: .
+      target: service3
+    image: myapp-service3:latest
+    ports:
+      - "46083:80"
+
+  service4:
+    build:
+      context: .
+      target: service4
+    image: myapp-service4:latest
+    ports:
+      - "46084:80"
